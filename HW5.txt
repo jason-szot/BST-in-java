@@ -1,0 +1,84 @@
+Binary Search Tree:
+
+In this assignment we are going to implement Binary Search Tree (BST) data structure for the 'date of birth (DOB), name' key-value pairs. 
+Your code has to support the following operations('=>' represents comment, all the given key-value pair will be unique). Operations will be 
+represented as numbers.
+
+1. put(key, value) 	=> Here, key is the DOB and value is the name. It will add the pair in the BST
+2. get(key) 		=> Given a DOB, it will give the name.
+3. min() 			=> It will give the min DOB and the name of the person. That is it will give DOB, name of the oldest person in the BST
+4. max()			=> It will give the max DOB and the name of the person. That is, it will give DOB, name of the youngest person in the BST
+5. floor(key)		=> It will give the floor DOB and the person's name. That is, given a DOB as key, it will print the largest DOB (and name) which is less than or equal to the given DOB.
+6. ceiling(key)		=> It will give the ceiling DOB and the person's name. That is, given a DOB as key, it will print the smallest DOB (and name) which is greater than or equal to the given DOB.
+7. rank(key)		=> It will give how many persons have earlier DOB that the given DOB.
+8. iterator()		=> Prints all the key-values in ascending order, one in each line
+
+As before input will be privided in a text file. The first line will have the size of the BST.
+Following lines will have the key-value pairs to initialize the BST. Then there will be a break marker, '*'. 
+This * should be ignored. Following the * are the operations you need to perform in the BST.
+For example, 
+
+8					=> The BST will have 8 nodes
+08/15/1975, Mujib	=> These are all the key-value pairs
+05/30/1981, Zia
+03/07/1971, Freedom
+12/16/1971, Victory
+02/21/1952, Molly
+01/20/1969, Asad
+03/25/1971, Genny
+03/26/197, Independent
+*						=> This is the break point, you should ignore this. Following lines will have the required operations.
+1 01/11/2007, Moyeen	=> This will put the value "Moyeen" using the DOB key as 01/11/2007 and print "Done"
+2 12/16/1971			=> This will get the associated value with the key, 12/16/1971 and print "Victory"
+3 						=> This will print (the min) oldest person's name in the console, "02/2/1952, Molly"
+4						=> This will print (the max) youngest person's name in the console, "01/11/2007, Moyeen"
+5 03/07/1970			=> This will print (the floor) the largest DOB that is less than or equal to the given input (03/07/1970): "02/21/1952, Molly"
+6 04/07/1971			=> This will print (the ceiling) the smallest DOB that is greater than or equal to given input(04/07/1971): "03/25/1971, Genny"
+7 08/15/1975			=> This will print (the rank) number of person's less than the input DOB (08/15/1975): 6
+8						=> Should print in ascending order, all the key-value pair in the BST
+
+
+Sample input file:
+8					
+08/15/1975, Mujib
+05/30/1981, Zia
+03/07/1971, Freedom
+12/16/1971, Victory
+02/21/1952, Molly
+01/20/1969, Asad
+03/25/1971, Genny
+03/26/197, Independent
+*
+1 01/11/2007, Moyeen	
+2 12/16/1971			
+3 						
+4						
+5 03/07/1970			
+6 04/07/1971			
+7 08/15/1975			
+8						
+
+Sample output:
+Done
+Vicroty
+02/2/1952, Molly
+01/11/2007, Moyeen
+02/21/1952, Molly
+03/25/1971, Genny
+6
+02/21/1952, Molly
+01/20/1969, Asad
+03/07/1971, Freedom
+03/25/1971, Genny
+03/26/197, Independent
+12/16/1971, Victory
+08/15/1975, Mujib
+05/30/1981, Zia
+01/11/2007, Moyeen
+
+
+
+
+
+
+
